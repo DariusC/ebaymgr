@@ -22,6 +22,13 @@ Ebaymgr::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
+
+  # This is reqiured for refinerys membership engine
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.delivery_method = :sendmail
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default_url_options = { :host => "some.host.com" }
+
 end
 
 Refinery.rescue_not_found = false

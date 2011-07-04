@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110703180928) do
+ActiveRecord::Schema.define(:version => 20110704134139) do
 
   create_table "images", :force => true do |t|
     t.string   "image_mime_type"
@@ -80,6 +80,29 @@ ActiveRecord::Schema.define(:version => 20110703180928) do
   add_index "pages", ["lft"], :name => "index_pages_on_lft"
   add_index "pages", ["parent_id"], :name => "index_pages_on_parent_id"
   add_index "pages", ["rgt"], :name => "index_pages_on_rgt"
+
+  create_table "pages_roles", :id => false, :force => true do |t|
+    t.integer "page_id"
+    t.integer "role_id"
+  end
+
+  create_table "product_references", :force => true do |t|
+    t.string   "sku"
+    t.string   "make"
+    t.string   "model_name"
+    t.string   "search_term"
+    t.decimal  "addject_rrp"
+    t.decimal  "addject_trade"
+    t.integer  "weight_grams"
+    t.integer  "ship_width_cm"
+    t.integer  "ship_height_cm"
+    t.integer  "ship_depth_cm"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "product_references", ["id"], :name => "index_product_references_on_id"
 
   create_table "refinery_settings", :force => true do |t|
     t.string   "name"
@@ -169,6 +192,19 @@ ActiveRecord::Schema.define(:version => 20110703180928) do
     t.string   "remember_token"
     t.string   "reset_password_token"
     t.datetime "remember_created_at"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "title"
+    t.string   "phone"
+    t.string   "fax"
+    t.string   "website"
+    t.string   "organization"
+    t.string   "street_address"
+    t.string   "city"
+    t.integer  "province"
+    t.string   "postal_code"
+    t.datetime "member_until"
+    t.string   "membership_level"
   end
 
   add_index "users", ["id"], :name => "index_users_on_id"

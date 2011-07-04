@@ -46,6 +46,13 @@ Ebaymgr::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+
+  # This is reqired for refinerys membership engine
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.delivery_method = :sendmail
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default_url_options = { :host => "some.host.com" }
+
 end
 Refinery.rescue_not_found = true
 # When true will use Amazon's Simple Storage Service on your production machine

@@ -1,0 +1,21 @@
+nb:
+  plugins:
+    product_references:
+      title: Product References
+  admin:
+    product_references:
+      actions:
+        create_new: Lag en ny Product Reference
+        reorder: Endre rekkefølgen på Product References
+        reorder_done: Ferdig å endre rekkefølgen Product References
+      records:
+        title: Product References
+        sorry_no_results: Beklager! Vi fant ikke noen resultater.
+        no_items_yet: Det er ingen Product References enda. Klikk på "Lag en ny Product Reference" for å legge til din første product reference.
+      product_reference:
+        view_live_html: Vis hvordan denne product reference ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+        edit: Rediger denne product reference
+        delete: Fjern denne product reference permanent
+  product_references:
+    show:
+      other: Andre Product References

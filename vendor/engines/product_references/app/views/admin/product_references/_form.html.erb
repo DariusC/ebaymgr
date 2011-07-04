@@ -1,0 +1,64 @@
+<%= form_for [:admin, @product_reference] do |f| -%>
+  <%= render :partial => "/shared/admin/error_messages", :locals => {
+          :object => @product_reference,
+          :include_object_name => true
+        } %>
+  
+  <div class='field'>
+    <%= f.label :sku -%>
+    <%= f.text_field :sku, :class => 'larger widest'  -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :make -%>
+    <%= f.text_field :make  -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :model_name -%>
+    <%= f.text_field :model_name  -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :search_term -%>
+    <%= f.text_field :search_term  -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :addject_rrp -%>
+    <%= f.text_field :addject_rrp  -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :addject_trade -%>
+    <%= f.text_field :addject_trade  -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :weight_grams -%>
+    <%= f.text_field :weight_grams  -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :ship_width_mm -%>
+    <%= f.text_field :ship_width_mm  -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :ship_height_mm -%>
+    <%= f.text_field :ship_height_mm  -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :ship_depth_mm -%>
+    <%= f.text_field :ship_depth_mm  -%>
+  </div>
+  
+  <%= render :partial => "/shared/admin/form_actions",
+              :locals => {
+                :f => f,
+                :continue_editing => false,
+                :delete_title => t('delete', :scope => 'admin.product_references.product_reference'),
+                :delete_confirmation => t('message', :scope => 'shared.admin.delete', :title => @product_reference.sku)
+              } %>
+<% end -%>

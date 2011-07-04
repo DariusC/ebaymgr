@@ -1,0 +1,25 @@
+en:
+  shared:
+    admin:
+      image_picker:
+        image: image
+  plugins:
+    product_references:
+      title: Product References
+  admin:
+    product_references:
+      actions:
+        create_new: Add New Product Reference
+        reorder: Reorder Product References
+        reorder_done: Done Reordering Product References
+      records:
+        title: Product References
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no Product References yet. Click "Add New Product Reference" to add your first product reference.
+      product_reference:
+        view_live_html: View this product reference live <br/><em>(opens in a new window)</em>
+        edit: Edit this product reference
+        delete: Remove this product reference forever
+  product_references:
+    show:
+      other: Other Product References

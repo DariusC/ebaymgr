@@ -1,0 +1,21 @@
+nl:
+  plugins:
+    product_references:
+      title: Product References
+  admin:
+    product_references:
+      actions:
+        create_new: Maak een nieuwe Product Reference
+        reorder: Wijzig de volgorde van de Product References
+        reorder_done: Klaar met het wijzingen van de volgorde van de Product References
+      records:
+        title: Product References
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen Product References. Druk op 'Maak een nieuwe Product Reference' om de eerste aan te maken.
+      product_reference:
+        view_live_html: Bekijk deze product reference op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze product reference
+        delete: Verwijder deze product reference voor eeuwig
+  product_references:
+    show:
+      other: Andere Product References

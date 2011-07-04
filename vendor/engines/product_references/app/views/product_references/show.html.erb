@@ -1,0 +1,81 @@
+<% content_for :body_content_title do %>
+  <%= @product_reference.sku %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  <section>
+    <h3>SKU</h3>
+    <p>
+      <%=raw @product_reference.sku %>
+    </p>
+  </section>
+  <section>
+    <h3>Make</h3>
+    <p>
+      <%=raw @product_reference.make %>
+    </p>
+  </section>
+  <section>
+    <h3>Model Name</h3>
+    <p>
+      <%=raw @product_reference.model_name %>
+    </p>
+  </section>
+  <section>
+    <h3>Search Term</h3>
+    <p>
+      <%=raw @product_reference.search_term %>
+    </p>
+  </section>
+  <section>
+    <h3>Addject RRP</h3>
+    <p>
+      <%=raw @product_reference.addject_rrp %>
+    </p>
+  </section>
+  <section>
+    <h3>Addject Trade</h3>
+    <p>
+      <%=raw @product_reference.addject_trade %>
+    </p>
+  </section>
+  <section>
+    <h3>Weight (Grams)</h3>
+    <p>
+      <%=raw @product_reference.weight_grams %>
+    </p>
+  </section>
+  <section>
+    <h3>Ship Width (cm)</h3>
+    <p>
+      <%=raw @product_reference.ship_width_mm %>
+    </p>
+  </section>
+  <section>
+    <h3>Ship Height (cm)</h3>
+    <p>
+      <%=raw @product_reference.ship_height_mm %>
+    </p>
+  </section>
+  <section>
+    <h3>Ship Depth (cm)</h3>
+    <p>
+      <%=raw @product_reference.ship_depth_mm %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :body_content_right do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="product_references">
+      <% @product_references.each do |product_reference| %>
+        <li>
+          <%= link_to product_reference.sku, product_reference_path(product_reference) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

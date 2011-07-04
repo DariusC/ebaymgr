@@ -1,0 +1,25 @@
+lolcat:
+  shared:
+    admin:
+      image_picker:
+        image: IMAGE
+  plugins:
+    product_references:
+      title: Product References
+  admin:
+    product_references:
+      actions:
+        create_new: CREATE NEW Product Reference
+        reorder: REORDR Product References
+        reorder_done: DUN REORDERIN Product References
+      records:
+        title: Product References
+        sorry_no_results: SRY! THAR R NO RESULTS FINDZ.
+        no_items_yet: THAR R NO Product References YET. CLICK "CREATE NEW Product Reference" 2 ADD UR FURST product reference.
+      product_reference:
+        view_live_html: VIEW DIS product reference LIV <BR/><EM>(OPENS IN NEW WINDOW)</EM>
+        edit: EDIT DIS product reference
+        delete: REMOOV DIS product reference FOREVR
+  product_references:
+    show:
+      other: OTHR Product References
